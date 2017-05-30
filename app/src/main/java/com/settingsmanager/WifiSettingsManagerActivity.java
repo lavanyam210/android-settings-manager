@@ -32,11 +32,11 @@ public class WifiSettingsManagerActivity extends AppCompatActivity {
         if (extras.containsKey(IntentExtras.ENABLE_WIFI)) {
             setWifiEnabledState(true);
         }
-        if (extras.containsKey(IntentExtras.CONNECT_TO_NETWORK) && extras.containsKey(IntentExtras.NETWORK_SSID)) {
+        if (extras.containsKey(IntentExtras.CONNECT) && extras.containsKey(IntentExtras.SSID)) {
             connectToNetwork();
         }
-        if (extras.containsKey(IntentExtras.CONNECT_TO_NEW_NETWORK)) {
-            if (extras.containsKey(IntentExtras.NETWORK_SSID) && extras.containsKey(IntentExtras.NETWORK_PASSWORD)) {
+        if (extras.containsKey(IntentExtras.NEW_CONNECTION)) {
+            if (extras.containsKey(IntentExtras.SSID) && extras.containsKey(IntentExtras.PASSWORD)) {
                 connectToNewNetwork();
             }
         }
@@ -48,8 +48,8 @@ public class WifiSettingsManagerActivity extends AppCompatActivity {
     }
 
     private void connectToNewNetwork() {
-        String networkSSID = extras.getString(IntentExtras.NETWORK_SSID);
-        String networkPassword = extras.getString(IntentExtras.NETWORK_PASSWORD);
+        String networkSSID = extras.getString(IntentExtras.SSID);
+        String networkPassword = extras.getString(IntentExtras.PASSWORD);
 
         WifiConfiguration wifiConfiguration = new WifiConfiguration();
         wifiConfiguration.SSID = String.format("\"%s\"", networkSSID);
@@ -62,7 +62,7 @@ public class WifiSettingsManagerActivity extends AppCompatActivity {
 
     private void connectToNetwork() {
         WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
-        String networkSSID = extras.getString(IntentExtras.NETWORK_SSID);
+        String networkSSID = extras.getString(IntentExtras.SSID);
         if (wifiManager.isWifiEnabled()) {
             List<WifiConfiguration> configuredNetworks = wifiManager.getConfiguredNetworks();
             Log.d(tag, "Configured network ids = " + configuredNetworks);
