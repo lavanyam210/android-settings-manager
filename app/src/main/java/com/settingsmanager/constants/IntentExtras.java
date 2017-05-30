@@ -1,4 +1,4 @@
-package com.vuclip.viu.settingsmanager.constants;
+package com.settingsmanager.constants;
 
 public class IntentExtras {
     public static final String DISABLE_WIFI = "disableWifi";

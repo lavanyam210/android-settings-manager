@@ -1,4 +1,4 @@
-package com.vuclip.viu.settingsmanager;
+package com.settingsmanager;
 
 import android.content.Context;
 import android.net.wifi.WifiConfiguration;
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.vuclip.viu.settingsmanager.constants.IntentExtras;
+import com.settingsmanager.constants.IntentExtras;
 
 import java.util.List;
 

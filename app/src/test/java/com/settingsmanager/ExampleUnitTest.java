@@ -1,4 +1,4 @@
-package com.vuclip.viu.settingsmanager;
+package com.settingsmanager;
 
 import org.junit.Test;
 
