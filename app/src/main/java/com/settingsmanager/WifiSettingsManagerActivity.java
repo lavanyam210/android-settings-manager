@@ -23,6 +23,7 @@ public class WifiSettingsManagerActivity extends AppCompatActivity {
         if (extras != null) {
             changeSettings();
         }
+        finish();
     }
 
     private void changeSettings() {
