@@ -7,4 +7,5 @@ public class IntentExtras {
     public static final String NEW_CONNECTION = "newConnection";
     public static final String SSID = "ssid";
     public static final String PASSWORD = "password";
+    public static final String NETWORK_TYPE = "networkType";
 }

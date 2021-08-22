@@ -13,4 +13,4 @@ The Android application for managing WI-FI settings
 `adb shell 'am start -n "com.settingsmanager/com.settingsmanager.WifiSettingsManagerActivity" --esn connect -e ssid "MyNetwork"'`
 
 ### To connect to new wifi network:
-`adb shell 'am start -n "com.settingsmanager/com.settingsmanager.WifiSettingsManagerActivity" --esn newConnection -e ssid "MyNewNetwork" -e password "MyPassword"'`
+`adb shell 'am start -n "com.settingsmanager/com.settingsmanager.WifiSettingsManagerActivity" --esn newConnection -e ssid "MyNewNetwork" -e password "MyPassword" -e networkType "<wep/wpa/open>'`
